@@ -3,9 +3,10 @@
    Strictly adheres to the FastAPI `/predict` contract and safety guidelines.
    ========================================================================== */
 
-const API_BASE_URL =
-  (window.DERMA_CONFIG && window.DERMA_CONFIG.API_BASE_URL) ||
-  "http://127.0.0.1:8000";
+const API_URL =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "http://127.0.0.1:8000"
+    : "https://YOUR-BACKEND.up.railway.app";
 const MAX_FILE_SIZE_BYTES =
   (window.DERMA_CONFIG && window.DERMA_CONFIG.MAX_FILE_SIZE_BYTES) ||
   10 * 1024 * 1024; // 10 MB
