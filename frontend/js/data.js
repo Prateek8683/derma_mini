@@ -3,7 +3,7 @@
    ========================================================================== */
 
 window.DERMA_CONFIG = {
-  API_BASE_URL: "http://127.0.0.1:8000",
+  API_BASE_URL: "https://dermafrontend-production.up.railway.app/",
   MAX_FILE_SIZE_BYTES: 10 * 1024 * 1024, // 10 MB
   REQUEST_TIMEOUT_MS: 60000 // 60 seconds
 };
