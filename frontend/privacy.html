@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy (Placeholder) — Derma.co</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container" style="max-width:840px;">
+        <div class="card reveal">
+          <span class="badge">Legal Placeholder</span>
+          <h1 class="mt-1">Privacy Policy</h1>
+          <p class="mt-2">
+            <strong>1. Overview:</strong> This page contains placeholder privacy disclosures for the Derma.co (Derma-Scan) project. Before public deployment, review and adapt this policy with qualified legal counsel.
+          </p>
+          <p>
+            <strong>2. Image Processing on Derma-Scan:</strong> When you select or capture an image on <code>scan.html</code>, check the consent box, and click "Analyze Skin Image", your image file is transmitted via an HTTP POST request (<code>multipart/form-data</code> under field <code>file</code>) to the configured backend server (<code>http://127.0.0.1:8000/predict</code>) so the model can compute a screening prediction.
+          </p>
+          <p>
+            <strong>3. Browser Storage:</strong> The Derma.co frontend does not store your uploaded skin photos or screening outputs in browser <code>localStorage</code> or <code>sessionStorage</code>. Temporary preview URLs created with <code>URL.createObjectURL()</code> are revoked when you remove the image or reset the scan.
+          </p>
+          <p>
+            <strong>4. Backend Retention:</strong> How images are handled on the server depends on the configured FastAPI backend implementation. Users should avoid uploading photos containing identifiable faces, name tags, or sensitive personal metadata unless required.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

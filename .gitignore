@@ -1,0 +1,42 @@
+﻿# Virtual environments (both of yours)
+venv/
+venv-gpu/
+.venv/
+**/venv/
+**/venv-gpu/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Stray file with the broken name
+backend/device*
+
+# Training outputs / generated data
+backend/app/training_log.csv
+*.npy
+*.npz
+*.pkl
+*.h5
+*.pt
+*.pth
+
+# Datasets and shards (uncomment/adjust to match your folder names)
+# dataset/
+# data/
+# shards/
+# embeddings/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

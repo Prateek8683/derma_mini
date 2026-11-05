@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find & Prepare for a Dermatologist Visit — Derma.co</title>
+  <meta name="description" content="Learn how to prepare for an in-person dermatology appointment and explore our consultation request demo." />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Professional Care First</span>
+          <h1>Partnering With a Board-Certified Dermatologist</h1>
+          <p>An AI screening tool is only a conversation starter. Nothing replaces a qualified dermatologist examining your skin in person.</p>
+        </div>
+
+        <!-- Sample Clinical Advisor Profiles -->
+        <h2 class="mb-2 reveal">Sample Clinical Advisor Profiles (Demo)</h2>
+        <div id="doctors-directory-grid" class="grid grid-3"></div>
+
+        <!-- Preparation Checklist + Demo Form -->
+        <div class="grid grid-2 mt-4" style="align-items:start;">
+          <div class="card reveal">
+            <span class="badge">Appointment Prep</span>
+            <h3 class="mt-1">How to Prepare for Your Dermatology Visit</h3>
+            <p class="mt-1">Bringing clear observations helps your dermatologist make the most of your appointment:</p>
+            <ul style="padding-left:1.2rem;margin-top:1rem;color:var(--text-muted);display:grid;gap:0.65rem;">
+              <li><strong>Timeline:</strong> Note when the spot or rash first appeared and whether it has changed in size, shape, or color.</li>
+              <li><strong>Symptoms:</strong> Mention if the area itches, burns, bleeds, crusts, or feels tender.</li>
+              <li><strong>Current Products:</strong> Bring a list or photos of cleansers, sunscreens, cosmetics, and any topical creams you use.</li>
+              <li><strong>Clean Skin:</strong> Arrive without makeup or nail polish if having a full-body or facial skin check.</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <span class="badge badge-coral">Frontend Demo Only</span>
+            <h3 class="mt-1">Request a Consultation (Demo Form)</h3>
+            <p class="mt-1" style="font-size:0.9rem;">
+              This interactive form validates inputs locally in your browser. No personal or medical data is transmitted.
+            </p>
+
+            <form id="doctor-consult-form" class="mt-2" novalidate>
+              <div class="mb-2">
+                <label for="consult-name" style="font-weight:700;font-size:0.9rem;display:block;margin-bottom:0.35rem;">Full Name *</label>
+                <input type="text" id="consult-name" class="input" placeholder="e.g., Riya Sharma" required />
+              </div>
+
+              <div class="mb-2">
+                <label for="consult-email" style="font-weight:700;font-size:0.9rem;display:block;margin-bottom:0.35rem;">Email Address *</label>
+                <input type="email" id="consult-email" class="input" placeholder="you@example.com" required />
+              </div>
+
+              <div class="mb-2">
+                <label for="consult-mode" style="font-weight:700;font-size:0.9rem;display:block;margin-bottom:0.35rem;">Preferred Visit Type</label>
+                <select id="consult-mode" class="input">
+                  <option value="in-clinic">In-Clinic Dermoscopy Evaluation</option>
+                  <option value="telederm">Video Follow-Up Consultation</option>
+                </select>
+              </div>
+
+              <div class="mb-2">
+                <label for="consult-concern" style="font-weight:700;font-size:0.9rem;display:block;margin-bottom:0.35rem;">Questions for the Dermatologist *</label>
+                <textarea id="consult-concern" rows="3" class="input" placeholder="Briefly note your general question (demo only)..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">Validate Demo Request</button>
+            </form>
+
+            <div id="consult-form-status" class="alert-box hidden" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/doctor.js"></script>
+</body>
+</html>

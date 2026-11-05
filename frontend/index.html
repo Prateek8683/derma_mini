@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derma.co | A Smarter First Step in Understanding Your Skin</title>
+  <meta name="description" content="Explore AI-assisted skin screening with a simple image upload. Get an initial model-generated result and learn when to seek professional medical advice." />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main id="main-content">
+    <!-- 3D Animated Hero Section -->
+    <section class="hero">
+      <div class="floating-blob blob-mint" style="top:-60px;left:-80px;" aria-hidden="true"></div>
+      <div class="floating-blob blob-coral" style="bottom:20px;right:-60px;" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 8v4l3 3"></path>
+            </svg>
+            Derma-Scan &bull; AI-Assisted Skin Screening
+          </span>
+
+          <h1 class="mt-2">A Smarter First Step in Understanding Your Skin.</h1>
+          <p class="mt-2" style="font-size:1.12rem;">
+            Explore AI-assisted skin screening with a simple image upload. Get an initial model-generated result and learn when to seek professional medical advice.
+          </p>
+
+          <div class="disclaimer-banner mt-2" style="padding:0.85rem 1.1rem;font-size:0.88rem;">
+            <span><strong>Screening Aid Only:</strong> Derma-Scan provides educational, AI-generated information—not a medical diagnosis.</span>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="scan.html" class="btn btn-primary">Start Free Skin Scan</a>
+            <a href="how-it-works.html" class="btn btn-ghost">How It Works</a>
+          </div>
+        </div>
+
+        <!-- 3D Layered Interactive Stage -->
+        <div class="hero-3d-stage reveal" aria-label="Interactive 3D Skin Screening Illustration">
+          <div class="hero-3d-rig">
+            <div class="floating-pill-card top-right layer-depth-3">
+              <span style="width:10px;height:10px;border-radius:50%;background:var(--primary);display:inline-block;"></span>
+              <span>37 Condition Guides</span>
+            </div>
+
+            <div class="scan-orb-wrapper layer-depth-2" aria-hidden="true">
+              <div class="scan-ring"></div>
+              <div class="scan-ring-2"></div>
+              <div class="scan-orb-core">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+            </div>
+
+            <div class="img-slot layer-depth-1" style="height:185px;margin-bottom:1rem;">
+              <img src="images/hero.jpg" alt="Calm skincare routine and gentle skin screening preview" width="440" height="220" loading="lazy" onerror="this.style.opacity='0'" />
+            </div>
+
+            <div class="layer-depth-2 text-center">
+              <h3 style="font-size:1.15rem;">Derma-Scan Visual Assistant</h3>
+              <p style="font-size:0.9rem;margin-top:0.25rem;">Upload JPEG, PNG, or WebP &bull; Instant Model Output</p>
+            </div>
+
+            <div class="floating-pill-card bottom-left layer-depth-3">
+              <span style="width:10px;height:10px;border-radius:50%;background:var(--accent);display:inline-block;"></span>
+              <span>Privacy-Conscious Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+      </svg>
+    </div>
+
+    <!-- How It Works (3 Rounded 3D-Tilt Cards) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Simple 3-Step Workflow</span>
+          <h2>How Derma-Scan Works</h2>
+          <p>A friendly, transparent workflow designed to help you organize visual observations before speaking with a clinician.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card tilt-card reveal">
+            <span class="badge">Step 01</span>
+            <h3 class="mt-1">Capture or Upload</h3>
+            <p class="mt-1">
+              Select a clear, well-lit photo of the skin area in JPEG, PNG, or WebP format—or capture one directly using your device camera.
+            </p>
+          </article>
+
+          <article class="card tilt-card reveal">
+            <span class="badge badge-coral">Step 02</span>
+            <h3 class="mt-1">AI Screening</h3>
+            <p class="mt-1">
+              With your consent, your image is sent to our FastAPI screening service, which extracts visual embeddings and runs our classifier model.
+            </p>
+          </article>
+
+          <article class="card tilt-card reveal">
+            <span class="badge">Step 03</span>
+            <h3 class="mt-1">Review Results & Guides</h3>
+            <p class="mt-1">
+              View the predicted class label and model confidence score alongside calm educational guides and advice on when to visit a dermatologist.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Platform Features -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Built for Clarity & Care</span>
+          <h2>Thoughtful Features for Everyday Skin Literacy</h2>
+          <p>Designed with soft aesthetics, clear boundaries, and helpful educational resources.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card tilt-card reveal">
+            <h3>Simple Image Upload</h3>
+            <p class="mt-1">Drag and drop or browse files up to 10 MB with automatic format and size verification before uploading.</p>
+          </div>
+          <div class="card tilt-card reveal">
+            <h3>Optional Live Camera</h3>
+            <p class="mt-1">Use your mobile or webcam only when you explicitly request it—camera tracks stop immediately after capture.</p>
+          </div>
+          <div class="card tilt-card reveal">
+            <h3>Clear Prediction Results</h3>
+            <p class="mt-1">See the exact model output and confidence percentage without confusing jargon or exaggerated promises.</p>
+          </div>
+          <div class="card tilt-card reveal">
+            <h3>Privacy-Conscious Handling</h3>
+            <p class="mt-1">No photos or medical details are saved in browser localStorage or sessionStorage.</p>
+          </div>
+          <div class="card tilt-card reveal">
+            <h3>37 Condition Guides</h3>
+            <p class="mt-1">Plain-language educational summaries covering acne, eczema, pigmentation, infections, and when to seek urgent care.</p>
+          </div>
+          <div class="card tilt-card reveal">
+            <h3>Mobile-Friendly Experience</h3>
+            <p class="mt-1">Large touch targets, keyboard accessibility, and responsive layouts across phones, tablets, and desktops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conditions Preview -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Educational Library</span>
+          <h2>Explore Common Skin Conditions</h2>
+          <p>Learn about common visual signs, gentle everyday habits, and when to schedule an in-person dermatology visit.</p>
+        </div>
+
+        <div id="home-conditions-preview" class="grid grid-3"></div>
+
+        <div class="text-center mt-4 reveal">
+          <a href="conditions.html" class="btn btn-primary">Explore All 37 Skin Conditions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust & Safety Section -->
+    <section class="section">
+      <div class="container">
+        <div class="card reveal" style="background:linear-gradient(135deg, var(--secondary) 0%, var(--card) 100%);padding:2.75rem;">
+          <div class="grid grid-2" style="align-items:center;">
+            <div>
+              <span class="badge badge-warn">Trust & Medical Safety First</span>
+              <h2 class="mt-1">What Derma-Scan Can—and Cannot—Do</h2>
+              <p class="mt-1">
+                Computer vision models can highlight visual patterns that resemble training examples, making them a helpful educational starting point. However, a photograph cannot feel skin texture, measure depth, take your medical history, or perform a dermoscopic biopsy.
+              </p>
+              <ul style="margin-top:1rem;padding-left:1.2rem;color:var(--text-muted);">
+                <li style="margin-bottom:0.45rem;"><strong>Not a Medical Diagnosis:</strong> Output is generated by a machine learning model for informational screening only.</li>
+                <li style="margin-bottom:0.45rem;"><strong>Cannot Rule Out Serious Conditions:</strong> High or low confidence scores never rule out melanoma, basal cell carcinoma, squamous cell carcinoma, or infections.</li>
+                <li style="margin-bottom:0.45rem;"><strong>Always Consult a Specialist:</strong> Seek prompt in-person medical evaluation for any changing, bleeding, painful, or persistent lesion.</li>
+              </ul>
+            </div>
+            <div class="img-slot" style="height:280px;">
+              <img src="images/trust-care.jpg" alt="Dermatologist consulting with a patient in a bright, welcoming clinic" width="520" height="320" loading="lazy" onerror="this.style.opacity='0'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section section-alt" id="faq-section">
+      <div class="container" style="max-width:840px;">
+        <div class="section-header reveal">
+          <span class="badge">Common Questions</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Clear answers about how Derma-Scan works and how to interpret screening results safely.</p>
+        </div>
+        <div id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="card text-center reveal" style="padding:3.25rem 1.75rem;background:var(--secondary);">
+          <span class="badge">Ready When You Are</span>
+          <h2 class="mt-1">Ready to Try AI-Assisted Skin Screening?</h2>
+          <p class="mt-1" style="max-width:600px;margin-left:auto;margin-right:auto;">
+            Upload a clear skin photo in seconds or browse our educational condition library to prepare for your next dermatologist visit.
+          </p>
+          <div class="hero-ctas" style="justify-content:center;">
+            <a href="scan.html" class="btn btn-primary">Start Free Skin Scan</a>
+            <a href="doctor.html" class="btn btn-ghost">Find a Dermatologist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Conditions Library (37 Guides) — Derma.co</title>
+  <meta name="description" content="Search and filter 37 educational skin condition guides including acne, rosacea, eczema, pigmentation, infections, benign growths, and lesions requiring prompt dermatologist care." />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Educational Reference Library</span>
+          <h1>37 Skin Conditions Explained Calmly</h1>
+          <p>Search by name or visual sign, or filter by category. All guides are for general education only and never replace a professional medical evaluation.</p>
+        </div>
+
+        <div class="disclaimer-banner mb-2 reveal">
+          <div>
+            <strong>Medical Safety Note:</strong> For potential pre-cancerous or cancerous lesions (such as Melanoma, Basal Cell Carcinoma, Squamous Cell Carcinoma, Actinic Keratosis, and Actinic Cheilitis) or rapid facial swelling (Angioedema), we highlight a priority reminder to consult a board-certified dermatologist promptly.
+          </div>
+        </div>
+
+        <div class="filter-bar mt-3 reveal">
+          <div class="chip-group" role="tablist" aria-label="Filter skin conditions by category">
+            <button type="button" class="chip active" data-cond-cat="all">All Categories</button>
+            <button type="button" class="chip" data-cond-cat="Acne-related">Acne-related</button>
+            <button type="button" class="chip" data-cond-cat="Inflammatory">Inflammatory</button>
+            <button type="button" class="chip" data-cond-cat="Pigmentation">Pigmentation</button>
+            <button type="button" class="chip" data-cond-cat="Infections">Infections</button>
+            <button type="button" class="chip" data-cond-cat="Benign growths">Benign growths</button>
+            <button type="button" class="chip" data-cond-cat="Pre-cancerous and cancerous">Pre-cancerous &amp; cancerous</button>
+            <button type="button" class="chip" data-cond-cat="Other">Other</button>
+          </div>
+
+          <div style="min-width:260px;flex:1;max-width:340px;">
+            <input
+              type="search"
+              id="condition-search"
+              class="input"
+              placeholder="Search condition, sign, or keyword..."
+              aria-label="Search skin conditions"
+            />
+          </div>
+        </div>
+
+        <p id="conditions-count" style="font-size:0.9rem;font-weight:600;margin-bottom:1.25rem;color:var(--primary);"></p>
+
+        <div id="conditions-directory-grid" class="grid grid-3"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

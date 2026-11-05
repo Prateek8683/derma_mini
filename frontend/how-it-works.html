@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works | Derma-Scan AI Screening Pipeline — Derma.co</title>
+  <meta name="description" content="Learn how Derma-Scan uses a model trained directly on the local dataset and understand its important clinical limitations." />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Transparent Technology</span>
+          <h1>How Derma-Scan Works Step-by-Step</h1>
+          <p>Understanding our local AI screening pipeline in plain language, along with why human dermatologists remain irreplaceable.</p>
+        </div>
+
+        <div class="grid grid-2" style="align-items:center;">
+          <div class="reveal">
+            <div class="card tilt-card mb-2">
+              <span class="badge">Step 1 &bull; Local Pre-Check</span>
+              <h3 class="mt-1">Photo Selection &amp; Consent</h3>
+              <p class="mt-1">You select a JPEG, PNG, or WebP image (up to 10 MB) or capture a photo with your camera. Your browser verifies the file format and asks for your explicit screening consent.</p>
+            </div>
+            <div class="card tilt-card mb-2">
+              <span class="badge badge-coral">Step 2 &bull; Image Preparation</span>
+              <h3 class="mt-1">Local Image Processing</h3>
+              <p class="mt-1">Your image is sent via a multipart POST request (field <code>file</code>) to our FastAPI service, where it is resized and prepared for the locally trained classifier.</p>
+            </div>
+            <div class="card tilt-card mb-2">
+              <span class="badge">Step 3 &bull; Classifier Prediction</span>
+              <h3 class="mt-1">Local Keras Classifier Inference</h3>
+              <p class="mt-1">The local Keras classifier (<code>skin_classifier.keras</code>) directly computes class probabilities from the prepared image and returns the top matching class and confidence percentage.</p>
+            </div>
+            <div class="card tilt-card">
+              <span class="badge">Step 4 &bull; Educational Context</span>
+              <h3 class="mt-1">Guided Next Steps</h3>
+              <p class="mt-1">Derma-Scan displays the output alongside plain-language condition guides and reminders on when to schedule an in-person dermatologist evaluation.</p>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="img-slot" style="height:260px;margin-bottom:1.5rem;">
+              <img src="images/how-it-works.jpg" alt="Visual diagram of local skin-photo classification pipeline" width="520" height="280" loading="lazy" onerror="this.style.opacity='0'" />
+            </div>
+            <h3>Important Limitations to Keep in Mind</h3>
+            <p class="mt-1">While machine learning models can recognize visual similarities across training datasets, they have strict boundaries:</p>
+            <ul style="padding-left:1.2rem;margin-top:0.85rem;color:var(--text-muted);display:grid;gap:0.5rem;">
+              <li><strong>Lighting &amp; Angles Matter:</strong> Shadows, camera blur, or warm indoor bulbs can shift model predictions significantly.</li>
+              <li><strong>No Physical Exam:</strong> An algorithm cannot feel whether a bump is firm, warm, tender, or scaly beneath the surface.</li>
+              <li><strong>No Medical History:</strong> The model does not know how long a spot has been present, whether it itches, or your family history.</li>
+              <li><strong>Not a Diagnostic Clearance:</strong> Never use a screening result to delay seeing a doctor for a changing or concerning mole.</li>
+            </ul>
+            <div class="mt-3">
+              <a href="scan.html" class="btn btn-primary">Try Derma-Scan Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skincare & Screening Guides — Derma.co</title>
+  <meta name="description" content="Practical, gentle skincare guides covering photo quality tips, daily sun protection, skin barrier care, and when to book an in-person dermatology visit." />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="badge">Everyday Skin Literacy</span>
+          <h1>Friendly Skincare &amp; Screening Guides</h1>
+          <p>Approachable articles written for teenagers and adults to support healthy skin habits and better dermatology visits.</p>
+        </div>
+
+        <div class="filter-bar reveal" style="justify-content:center;">
+          <div class="chip-group" role="tablist" aria-label="Filter skincare guides">
+            <button type="button" class="chip active" data-guide-cat="all">All Guides</button>
+            <button type="button" class="chip" data-guide-cat="Screening Tips">Screening Tips</button>
+            <button type="button" class="chip" data-guide-cat="Sun Care">Sun Care</button>
+            <button type="button" class="chip" data-guide-cat="Daily Care">Daily Care</button>
+            <button type="button" class="chip" data-guide-cat="Clinical Safety">Clinical Safety</button>
+            <button type="button" class="chip" data-guide-cat="Acne Care">Acne Care</button>
+            <button type="button" class="chip" data-guide-cat="Pigmentation">Pigmentation</button>
+          </div>
+        </div>
+
+        <div id="guides-grid" class="grid grid-3"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
